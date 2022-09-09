@@ -34,7 +34,6 @@ const opt = {
 };
 
 bot.onText(/\/start/, (msg, match) => {
-  if (msg.text === '/start') return;
   const chatId = msg.chat.id;
   const resp =
     'Привет! \n' +
@@ -46,6 +45,7 @@ bot.onText(/\/start/, (msg, match) => {
 });
 
 bot.on('message', (msg) => {
+  if (msg.text === '/start') return;
   const chatId = msg.chat.id;
   const resp =
     'Чтобы перейти к игре или принять участие в конкурсе – нажми на кнопку ниже';
