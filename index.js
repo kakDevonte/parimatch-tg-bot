@@ -34,6 +34,7 @@ const opt = {
 };
 
 bot.onText(/\/start/, (msg, match) => {
+  if (msg.text === '/start') return;
   const chatId = msg.chat.id;
   const resp =
     'Привет! \n' +
