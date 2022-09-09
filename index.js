@@ -46,6 +46,7 @@ bot.onText(/\/start/, (msg, match) => {
 
 bot.on('message', (msg) => {
   if (msg.text !== '/start') {
+    console.log(msg);
   const chatId = msg.chat.id;
   const resp =
     'Чтобы перейти к игре или принять участие в конкурсе – нажми на кнопку ниже';
