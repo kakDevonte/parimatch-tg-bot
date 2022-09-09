@@ -45,11 +45,12 @@ bot.onText(/\/start/, (msg, match) => {
 });
 
 bot.on('message', (msg) => {
-  if (msg.text === '/start') return;
+  if (msg.text !== '/start') {
   const chatId = msg.chat.id;
   const resp =
     'Чтобы перейти к игре или принять участие в конкурсе – нажми на кнопку ниже';
   bot.sendMessage(chatId, resp, opt);
+  }
 });
 
 const PORT = process.env.PORT || 3000;
